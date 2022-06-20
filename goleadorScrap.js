@@ -9,16 +9,19 @@ axios(url).then(response => {
     tabelaStatus.each(function(){
         const nomeJogador = $(this).find('.jogador-nome').text();
         const escudoTime = $(this).find('.jogador-escudo > img').attr('src');
-        const posicaoJogador = $(this).find('.jogador-posicao').text();
-      //  const numeroGols = $(this).find('.jogador-+gols').text();
-      const timeJogador = $(this).find('.jogador-escudo > img').attr('alt');
+        const posicaoJogador = $(this).find('.jogador-posicao').text()
+        const gols = $(this).find('.jogador-gols').text();
+        const timeJogador = $(this).find('.jogador-escudo > img').attr('alt');
+  
+      
+    
         tabelaJogador.push({
             nomeJogador,
             escudoTime,
             posicaoJogador,
-          //  numeroGols
+            gols,
             timeJogador
         });
     });
-    console.log(tabelaJogador);
-}).catch(console.error);
+  console.log(tabelaJogador);
+  }).catch(console.error);
